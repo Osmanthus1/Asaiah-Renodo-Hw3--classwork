@@ -33,4 +33,11 @@ public class playercounter : MonoBehaviour
         }
         transform.position = currentPos;
     }
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Collect")
+        {
+            Destroy(other.gameObject);
+        }
+    }
 }
