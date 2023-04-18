@@ -27,5 +27,11 @@ public class GameManager : MonoBehaviour
     {
         
     }
-
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Collect")
+        {
+            Destroy(other.gameObject);
+        }
+    }
 }
